@@ -25,15 +25,3 @@ def Crawling(search_text,start_date,end_date):
             pass
 
     return titles
-
-stock = '삼성전자'
-search_text = '{}+주식'.format(stock)
-# 검색 키워드 형식 -> 1) +주식, -주식, 주식 | 하락,  "이재용 출소", 섞어서 사용가능
-start_date = '2021.08.10'
-end_date = '2021.08.14'
-
-only_title=[]
-for title in Crawling(search_text,start_date,end_date):
-    only_title.append(title[0])
-    print(title)
-print(return_keyword(only_title))
